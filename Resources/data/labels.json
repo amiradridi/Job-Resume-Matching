@@ -1,0 +1,27 @@
+{"DEGREE":{"BS-LEVEL":["bachelors","bachelor's","bachelor","b.s","b.a","baccalaureate","ba", "ba/bs", "bsba", "b.a", "4-year", "4 year", "four year", "college", "undergraduate", "university", "bsc","bs","be","b.e"],
+           "MS-LEVEL":["master", "master's","ms", "m.s"],
+           "PHD-LEVEL" : ["phd", "ph.d", "doctorate"]},
+"EXPERIENCE-LEVEL" : {"EXPERIENCE" : ["work","practical experience", "work experience", "professional experience", "experience", "proven work experience","experienced"],
+           "PREFERRED" : ["preferred", "desired", "desirable", "a plus"],
+                                 "MANDATORY" : ["mandatory", "required"], 
+                                 "SIMILAR" : ["similar", "related", "relevant", "equivalent", "based"],
+                                 "FAMILIARITY" : ["familiarity", "deal", "ability", "knowledge","excellent knowledge"],
+                                 "EXPERTISE" : ["proficient", "expert", "proficiency", "expertise", "highly skilled"]},
+ "MAJOR" : {"DEV" : ["software engineering", "software development", "computer sciences","computer software","information systems","information science","information sciences","computer engineering","cybersecurity","web development","network security","programming","computer science","computer engineering","systems analysis","computer programming","information sciences","information technology","cybersecurity","systems and network administration"],
+            "AI" : ["data sciences","artificial intelligence","data analysis","nlp","nlp engineering","ai engineering","ai","computer vision","data engineering","mathematics","statistics"]},
+ "SKILL" : {"CODING" : ["python", "java", "c", "c++", ".net","cplusplus","object-oriented design","application architecture and design","coding standards","code reviews","source code control"],
+            "DATA SCIENCES" : ["pandas","numpy","tensorflow","pytorch","scikit learn","sklearn","matplotlib","seaborn"],
+            "AUTOMATION" : ["devops","docker","vagrant","maven","jenkins" ],
+            "BIG DATA" : ["hadoop", "hive", "pig", "spark", "sqoop", "kafka", "flume"],
+            "WEB-DEVELOPMENT" : ["angular", "react", "html", "css","react js", "reactjs", "react-js"],
+            "MOBILE-DEVELOPMENT" : ["android", "swiftic", "native scripts","react native","xamarin","ionic", "sencha ext js","onsen ui", "flutter", "corona","jquery"]},
+ "STOP-WORDS" : {"HAVE" : ["has","have","had"],
+                "BE" : ["be", "is", "are", "am","was","were"],
+                "DE" : ["a", "an","the"],
+                "CE" : ["with","of","in"]},
+"RELATED" : ["similar", "related", "relevant", "equivalent"],
+
+"MINIMUM" : ["over","at least","a minimum of", "minimum","minimum of"]
+
+}
+                 

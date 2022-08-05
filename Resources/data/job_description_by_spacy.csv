@@ -1,0 +1,40 @@
+,Qualifications,Minimum degree level,Acceptable majors,Skills
+0,"bachelor’s and/or master’s in computer science, computer engineering, or related technical discipline
+5+ years of professional software development experience
+proficiency in java or c++",BS-LEVEL,"['computer science', 'computer engineering', 'software development']","['java', 'c++']"
+1,"b.a. or b.s. in computer science, information technology, or related discipline (m.s. preferred)
+over 5 years of software engineering or related experience
+over 3 years of software development experience
+experience managing teams and projects
+proven programming experience (java, python, c++, etc.)
+highly skilled in data gathering and analysis
+extensive experience with software development best practices and methodologies
+strong knowledge of software design, documentation, and testing
+project management knowledge (requirements, design, planning)
+knowledge of software architecture (preferred)
+experience coaching and mentoring junior team members (preferred)
+music industry experience (preferred)",BS-LEVEL,"['computer science', 'information technology', 'software engineering', 'software development', 'programming']","['java', 'python', 'c++']"
+2,"bachelor’s in computer science or equivalent experience
+3 to 5 years of experience in b2b
+hands-on experience working with technologies like hadoop, hive, pig, spark, sqoop, kafka, flume, etc.
+strong devops focus and experience building and deploying infrastructure with cloud deployment technologies like ansible, chef, puppet, etc.
+experience with test-driven development and automated testing frameworks
+experience with scrum/agile development methodologies
+capable of delivering on multiple competing priorities with little supervision
+experience with infrastructure automation technologies like docker, vagrant, etc.
+experience with build automation (maven, jenkins, etc.), monitoring (nagios, ganglia, etc.), apis, and services using rest, soap, etc.",BS-LEVEL,['computer science'],"['hadoop', 'hive', 'pig', 'spark', 'sqoop', 'kafka', 'flume', 'devops', 'docker', 'vagrant', 'maven', 'jenkins']"
+3,"bachelor’s and/or master’s in computer science, computer engineering, or related technical discipline
+5+ years of professional software development experience
+proficiency in java or c++
+object-oriented design skills
+knowledge of application architecture and design
+knowledge of software engineering and best practices, including coding standards, code reviews, source code control, build processes, testing, and operations
+experience serving as technical lead throughout the full software development lifecycle, (conception, scope, architecture, design, planning, implementation, testing, documentation, delivery, maintenance)—preferred
+experience in the development of distributed systems, scalability, and high-volume transaction processing—preferred",BS-LEVEL,"['computer science', 'computer engineering', 'software development', 'software engineering']","['java', 'c++', 'object-oriented design', 'application architecture and design', 'coding standards', 'code reviews', 'source code control']"
+4,"bachelor’s and/or master’s in computer science, computer engineering or related technical discipline
+5+ years of professional software development experience
+proficiency in java or c++, and object-oriented design skills
+application architecture and design patterns
+experience serving as technical lead throughout the full software development lifecycle, from conception, architecture definition, detailed design, scoping, planning, implementation, testing to documentation, delivery and maintenance is preferred
+knowledge of professional software engineering and best practices for the full software development life cycle, including coding standards, code reviews, source control management, build processes, testing, and operations
+experience in development of distributed/scalable systems and high-volume transaction applications",BS-LEVEL,"['computer science', 'computer engineering', 'software development', 'software engineering']","['java', 'c++', 'object-oriented design', 'application architecture and design', 'coding standards', 'code reviews']"
