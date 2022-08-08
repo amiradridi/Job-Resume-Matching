@@ -11,6 +11,18 @@ The idea is to calculate the similarity between the resume and the job descripti
 * 1st step: information retrieval
   Information Extraction is the task of automatically extracting structured information such as entities, relationships between entities, and attributes describing
 entities from unstructured sources. Our system uses spacy PhraseMatcher to extract the information from job descriptions.
+We prepared a dictionary that has all education degrees categories, all majors and skills categories related to computer engineering field. We fed that dictionary to the Spacy rule-based PhraseMatcher in order to detect and recognize entities in our job description.
+The job information extraction would look like:
+
+<p align="center">
+  <img src="./Resources/Project documentation/Job entities example1.png" width="650" title="Majors matching rule" alt="Majors matching rule">
+</p>
+  
+Our structured job descriptions data :
+
+<p align="center">
+  <img src="./Resources/Project documentation/Job data.png" width="650" title="Majors matching rule" alt="Majors matching rule">
+ </p>
 
 * 2nd step: Matching rules
   We implemented matching rules to calculate the similarity between the resume and the job description. Those matching rules don't only use simple keywords matching but also ontology matching techniques.
