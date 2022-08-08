@@ -34,7 +34,7 @@ Our structured job descriptions dataset :
   
   * Majors section matching rules
   <p align="center">
-  <img src="./Resources/Project documentation/Majors rules.png" width="650" title="Majors matching rule" alt="Majors matching rule">
+  <img src="./Resources/Project documentation/Majors rules.png" width="600" title="Majors matching rule" alt="Majors matching rule">
   </p>
   
   * Skills section matching rules
