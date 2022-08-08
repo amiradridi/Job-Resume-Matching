@@ -75,3 +75,14 @@ async def matching():
         new_matched_resume = await database.get_collection("matches").insert_one(matched_resume)
     resumes_matched_json = transform_dataframe_to_json(resumes_matched)
     return resumes_matched_json
+
+
+@app.get("/top_resumes")
+async def extraction():
+    top_resumes = database.matches.find().sort("matching_score", -1).limit(5)
+    result = []
+    top_resumes = await top_resumes.to_list(None)
+    for x in top_resumes:
+        result.append(x)
+    top_resumes_json = jsonable_encoder(result)
+    return top_resumes_json
