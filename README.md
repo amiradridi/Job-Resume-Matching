@@ -11,19 +11,24 @@ The idea is to calculate the similarity between the resume and the job descripti
 * 1st step: information retrieval
   Information Extraction is the task of automatically extracting structured information such as entities, relationships between entities, and attributes describing
 entities from unstructured sources. Our system uses spacy PhraseMatcher to extract the information from job descriptions.
+
 * 2nd step: Matching rules
   We implemented matching rules to calculate the similarity between the resume and the job description. Those matching rules don't only use simple keywords matching but also ontology matching techniques.
+ 
   * Education section matching rules
   <p align="center">
   <img src="./Resources/Project documentation/Education rules.png" width="650" title="Education matching rule" alt="Education matching rule">
   </p>
+  
   * Majors section matching rules
   <p align="center">
-  <img src="./Resources/Project documentation/Majors rules.png" width="650" title="Education matching rule" alt="Education matching rule">
+  <img src="./Resources/Project documentation/Majors rules.png" width="650" title="Majors matching rule" alt="Majors matching rule">
   </p>
+  
   * Skills section matching rules
   <p align="center">
-  <img src="./Resources/Project documentation/Skills rules.png" width="650" title="Education matching rule" alt="Education matching rule">
+  <img src="./Resources/Project documentation/Skills rules.png" width="650" title="Skills matching rule" alt="Skills matching rule">
   </p>
+ 
 * 3rd step: 
   We Calculated the final similarity score and returned the resumes with the highest similarity score.
