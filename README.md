@@ -13,17 +13,17 @@ The idea is to calculate the similarity between the resume and the job descripti
 entities from unstructured sources. Our system uses spacy PhraseMatcher to extract the information from job descriptions.
 * 2nd step: Matching rules
   We implemented matching rules to calculate the similarity between the resume and the job description. Those matching rules don't only use simple keywords matching but also ontology matching techniques.
-  *Education section matching rules
+  * Education section matching rules
   <p align="center">
-  <img src="./Resources/Project documentation/Education rules.png" width="250" title="Education matching rule" alt="Education matching rule">
+  <img src="./Resources/Project documentation/Education rules.png" width="500" title="Education matching rule" alt="Education matching rule">
   </p>
-  *Majors section matching rules
+  * Majors section matching rules
   <p align="center">
-  <img src="./Resources/Project documentation/Majors rules.png" width="250" title="Education matching rule" alt="Education matching rule">
+  <img src="./Resources/Project documentation/Majors rules.png" width="350" title="Education matching rule" alt="Education matching rule">
   </p>
-  *Skills section matching rules
+  * Skills section matching rules
   <p align="center">
-  <img src="./Resources/Project documentation/Skills rules.png" width="250" title="Education matching rule" alt="Education matching rule">
+  <img src="./Resources/Project documentation/Skills rules.png" width="400" title="Education matching rule" alt="Education matching rule">
   </p>
 * 3rd step: 
   We Calculated the final similarity score and returned the resumes with the highest similarity score.
