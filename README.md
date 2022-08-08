@@ -15,13 +15,13 @@ We prepared a dictionary that has all education degrees categories, all majors a
 The job information extraction would look like:
 
 <p align="center">
-  <img src="./Resources/Project documentation/Job entities example1.png" width="650" title="Majors matching rule" alt="Majors matching rule">
+  <img src="./Resources/Project documentation/Job entities example1.png" width="700" title="Job information extraction example" alt="Job information extraction example">
 </p>
   
-Our structured job descriptions data :
+Our structured job descriptions dataset :
 
 <p align="center">
-  <img src="./Resources/Project documentation/Job data.png" width="650" title="Majors matching rule" alt="Majors matching rule">
+  <img src="./Resources/Project documentation/Job data.png" width="650" title="Job descriptions dataset" alt="Job descriptions dataset">
  </p>
 
 * 2nd step: Matching rules
@@ -34,7 +34,7 @@ Our structured job descriptions data :
   
   * Majors section matching rules
   <p align="center">
-  <img src="./Resources/Project documentation/Majors rules.png" width="650" title="Majors matching rule" alt="Majors matching rule">
+  <img src="./Resources/Project documentation/Majors rules.png" width="600" title="Majors matching rule" alt="Majors matching rule">
   </p>
   
   * Skills section matching rules
