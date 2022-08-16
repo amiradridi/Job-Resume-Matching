@@ -46,19 +46,19 @@ Our structured job descriptions dataset :
       In this part, we will use semantic similarity-based approach to match resumes and jobs.
       Semantic similarity approach is the task of searching for documents or sentences (resumes) which contain semantically similar content to a search document           (the job description).
       The steps that we followed are:
-      1.	We derive semantically meaningful word and sentence embeddings using the best Siamese BERT-Networks pretrained model ‘all-mpnet-base-v2’ that has these             specificities:
-          <p align="center">
-          <img src="./Resources/Project documentation/pre-trained sbert model.png" width="650" title="pre-trained sbert model" alt="pre-trained sbert model">
-          </p>
-          <p align="center">
-          <img src="./Resources/Project documentation/sbert_models_differences.png" width="650" title="sbert_models_differences" alt="sbert_models_differences">
-          </p>
-      2.	We compare those embeddings with cosine similarity to find the nearest resumes to the job description
-          Cosine similarity is defined as the inner product of two vectors divided by the product of their length. Cosine similarity is defined as:
-          <p align="center">
-          <img src="./Resources/Project documentation/cosine similarity.png" width="650" title="cosine similarity" alt="cosine similarity">
-          </p>
-          where vectors a and b have the same number of dimensions N. Cosine similarity can be used to compare similarity between document vectors.
+        1.	We derive semantically meaningful word and sentence embeddings using the best Siamese BERT-Networks pretrained model ‘all-mpnet-base-v2’ that has these             specificities:
+            <p align="center">
+            <img src="./Resources/Project documentation/pre-trained sbert model.png" width="650" title="pre-trained sbert model" alt="pre-trained sbert model">
+            </p>
+            <p align="center">
+            <img src="./Resources/Project documentation/sbert_models_differences.png" width="650" title="sbert_models_differences" alt="sbert_models_differences">
+            </p>
+        2.  We compare those embeddings with cosine similarity to find the nearest resumes to the job description
+            Cosine similarity is defined as the inner product of two vectors divided by the product of their length. Cosine similarity is defined as:
+            <p align="center">
+            <img src="./Resources/Project documentation/cosine similarity.png" width="650" title="cosine similarity" alt="cosine similarity">
+            </p>
+            where vectors a and b have the same number of dimensions N. Cosine similarity can be used to compare similarity between document vectors.
           
          We tried that approach on both skills words and skills sentences of four resumes’ levels: 
             * Lowest_resume: resume skills are far away from the job description required skills 
