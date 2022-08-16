@@ -77,33 +77,34 @@ Our structured job descriptions dataset :
     <img src="./Resources/Project documentation/Job_description_example.png" width="650" title="Job_description_example" alt="Job_description_example">
     </p>
             
-      Lowest_resume:
+   Lowest_resume:
     <p align="center">
     <img src="./Resources/Project documentation/Lowest_resume_example.png" width="650" title="Lowest_resume_example" alt="Lowest_resume_example">
     </p>
             
-            Low_resume:
+   Low_resume:
     <p align="center">
             <img src="./Resources/Project documentation/Low_resume_example.png" width="650" title="Low_resume_example" alt="Low_resume_example">
     </p>
             
-            Intermediate_resume:
+   Intermediate_resume:
 <p align="center">
 <img src="./Resources/Project documentation/Intermediate_resume_example.png" width="650" title="Intermediate_resume_example"                    alt="Intermediate_resume_example">
 </p>
             
-            High_resume:
+   High_resume:
 <p align="center">
 <img src="./Resources/Project documentation/High_resume_example.png" width="650" title="High_resume_example" alt="High_resume_example">
 </p>
             
-            High_plus_resume:
+   High_plus_resume:
 <p align="center">
 <img src="./Resources/Project documentation/High_plus_resume_example.png" width="650" title="High_plus_resume_example" alt="High_plus_resume_example">
 </p>
             
             
-            Evaluation:
+   Evaluation:
+   
 |                     | Semantic similarity on Word embeddings  | Semantic similarity on Sentence embeddings |
 | ------------------- | --------------------------------------- | ------------------------------------------ |
 | Lowest_resume       | 0.19                                    | 0.08                                       |
@@ -112,9 +113,9 @@ Our structured job descriptions dataset :
 | High_resume         | 0.74                                    | 0.82                                       |
 | High_plus_resume    | 0.77                                    | 0.74                                       |
 
-            Semantic similarity on word embeddings approach works better for two reasons:
-            1.	It tries to find related skills if a required skill doesn’t exist in the resume
-            2.	It values the fact that a resume has plus skills while sentence-based approach makes the resume’s vector representation with plus skills far a way                   from the job description
+   Semantic similarity on word embeddings approach works better for two reasons:
+   1.	It tries to find related skills if a required skill doesn’t exist in the resume
+   2.	It values the fact that a resume has plus skills while sentence-based approach makes the resume’s vector representation with plus skills far a way                   from the job description
 
 
 
