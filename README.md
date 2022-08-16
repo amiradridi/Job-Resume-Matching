@@ -38,9 +38,82 @@ Our structured job descriptions dataset :
   </p>
   
   * Skills section matching rules
+      First method Common words ratio:
   <p align="center">
   <img src="./Resources/Project documentation/Skills rules.png" width="650" title="Skills matching rule" alt="Skills matching rule">
   </p>
+      Second method semantic similarity: 
+      In this part, we will use semantic similarity-based approach to match resumes and jobs.
+      Semantic similarity approach is the task of searching for documents or sentences (resumes) which contain semantically similar content to a search document           (the job description).
+      The steps that we followed are:
+      1.	We derive semantically meaningful word and sentence embeddings using the best Siamese BERT-Networks pretrained model ‘all-mpnet-base-v2’ that has these             specificities:
+          <p align="center">
+          <img src="./Resources/Project documentation/pre-trained sbert model.png" width="650" title="pre-trained sbert model" alt="pre-trained sbert model">
+          </p>
+          <p align="center">
+          <img src="./Resources/Project documentation/sbert_models_differences.png" width="650" title="sbert_models_differences" alt="sbert_models_differences">
+          </p>
+      2.	We compare those embeddings with cosine similarity to find the nearest resumes to the job description
+          Cosine similarity is defined as the inner product of two vectors divided by the product of their length. Cosine similarity is defined as:
+          <p align="center">
+          <img src="./Resources/Project documentation/cosine similarity.png" width="650" title="cosine similarity" alt="cosine similarity">
+          </p>
+          where vectors a and b have the same number of dimensions N. Cosine similarity can be used to compare similarity between document vectors.
+          
+          We tried that approach on both skills words and skills sentences of four resumes’ levels: 
+            •	Lowest_resume: resume skills are far away from the job description required skills 
+            •	Low_resume: resume skills are a bit far from the job description required skills
+            •	Intermediate_resume: resume skills are related to the job description skills
+            •	High_resume: most resume skills exist/relate very well with the job description required skills
+            •	High_plus_resume: most resume skills exist/relate very well with the job description required skills and there are extra skills
+            These are our samples:
+            
+            Job description:
+            <p align="center">
+            <img src="./Resources/Project documentation/Job_description_example.png" width="650" title="Job_description_example" alt="Job_description_example">
+            </p>
+            
+            Lowest_resume:
+            <p align="center">
+            <img src="./Resources/Project documentation/Lowest_resume_example.png" width="650" title="Lowest_resume_example" alt="Lowest_resume_example">
+            </p>
+            
+            Low_resume:
+            <p align="center">
+            <img src="./Resources/Project documentation/Low_resume_example.png" width="650" title="Low_resume_example" alt="Low_resume_example">
+            </p>
+            
+            Intermediate_resume:
+            <p align="center">
+            <img src="./Resources/Project documentation/Intermediate_resume_example.png" width="650" title="Intermediate_resume_example"                    alt="Intermediate_resume_example">
+            </p>
+            
+            High_resume:
+            <p align="center">
+            <img src="./Resources/Project documentation/High_resume_example.png" width="650" title="High_resume_example" alt="High_resume_example">
+            </p>
+            
+            High_plus_resume:
+            <p align="center">
+            <img src="./Resources/Project documentation/High_plus_resume_example.png" width="650" title="High_plus_resume_example" alt="High_plus_resume_example">
+            </p>
+            
+            
+            Evaluation:
+            |  | Semantic similarity on Word embeddings  | Semantic similarity on Sentence embeddings |
+            | ------------- | ------------- | ------------- |
+            | Lowest_resume | 0.19  | 0.08  |
+            | Low_resume | 0.37  | 0.48  |
+            | Intermediate_resume | 0.58  | 0.45  |
+            | High_resume | 0.74  | 0.82  |
+            | High_plus_resume | 0.77  | 0.74  |
+
+            Semantic similarity on word embeddings approach works better for two reasons:
+            1.	It tries to find related skills if a required skill doesn’t exist in the resume
+            2.	It values the fact that a resume has plus skills while sentence-based approach makes the resume’s vector representation with plus skills far a way                   from the job description
+
+
+
  
 * 3rd step: 
   We Calculated the final similarity score and returned the resumes with the highest similarity score.
