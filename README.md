@@ -61,11 +61,11 @@ Our structured job descriptions dataset :
           where vectors a and b have the same number of dimensions N. Cosine similarity can be used to compare similarity between document vectors.
           
          We tried that approach on both skills words and skills sentences of four resumes’ levels: 
-            •	Lowest_resume: resume skills are far away from the job description required skills 
-            •	Low_resume: resume skills are a bit far from the job description required skills
-            •	Intermediate_resume: resume skills are related to the job description skills
-            •	High_resume: most resume skills exist or relate very well with the job description required skills
-            •	High_plus_resume: most resume skills existor relate very well with the job description required skills and there are extra skills
+            * Lowest_resume: resume skills are far away from the job description required skills 
+            * Low_resume: resume skills are a bit far from the job description required skills
+            * Intermediate_resume: resume skills are related to the job description skills
+            * High_resume: most resume skills exist or relate very well with the job description required skills
+            * High_plus_resume: most resume skills existor relate very well with the job description required skills and there are extra skills
             These are our samples:
            
         Job description:
