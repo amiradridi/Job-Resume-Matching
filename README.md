@@ -69,19 +69,19 @@ Our structured job descriptions dataset :
             These are our samples:
             
             Job description:
-            <p align="center">
-            <img src="./Resources/Project documentation/Job_description_example.png" width="650" title="Job_description_example" alt="Job_description_example">
-            </p>
+    <p align="center">
+    <img src="./Resources/Project documentation/Job_description_example.png" width="650" title="Job_description_example" alt="Job_description_example">
+    </p>
             
             Lowest_resume:
-            <p align="center">
-            <img src="./Resources/Project documentation/Lowest_resume_example.png" width="650" title="Lowest_resume_example" alt="Lowest_resume_example">
-            </p>
+    <p align="center">
+    <img src="./Resources/Project documentation/Lowest_resume_example.png" width="650" title="Lowest_resume_example" alt="Lowest_resume_example">
+    </p>
             
             Low_resume:
-            <p align="center">
+    <p align="center">
             <img src="./Resources/Project documentation/Low_resume_example.png" width="650" title="Low_resume_example" alt="Low_resume_example">
-            </p>
+    </p>
             
             Intermediate_resume:
 <p align="center">
@@ -89,14 +89,14 @@ Our structured job descriptions dataset :
 </p>
             
             High_resume:
-            <p align="center">
-            <img src="./Resources/Project documentation/High_resume_example.png" width="650" title="High_resume_example" alt="High_resume_example">
-            </p>
+<p align="center">
+<img src="./Resources/Project documentation/High_resume_example.png" width="650" title="High_resume_example" alt="High_resume_example">
+</p>
             
             High_plus_resume:
-            <p align="center">
-            <img src="./Resources/Project documentation/High_plus_resume_example.png" width="650" title="High_plus_resume_example" alt="High_plus_resume_example">
-            </p>
+<p align="center">
+<img src="./Resources/Project documentation/High_plus_resume_example.png" width="650" title="High_plus_resume_example" alt="High_plus_resume_example">
+</p>
             
             
             Evaluation:
