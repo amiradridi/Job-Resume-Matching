@@ -70,14 +70,14 @@ Our structured job descriptions dataset :
          * High_resume: most resume skills exist or relate very well with the job description required skills
          * High_plus_resume: most resume skills existor relate very well with the job description required skills and there are extra skills
          
-            These are our samples:
+         These are our samples:
            
-        Job description:
+         Job description:
     <p align="center">
     <img src="./Resources/Project documentation/Job_description_example.png" width="650" title="Job_description_example" alt="Job_description_example">
     </p>
             
-            Lowest_resume:
+      Lowest_resume:
     <p align="center">
     <img src="./Resources/Project documentation/Lowest_resume_example.png" width="650" title="Lowest_resume_example" alt="Lowest_resume_example">
     </p>
