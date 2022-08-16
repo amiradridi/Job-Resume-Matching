@@ -84,9 +84,9 @@ Our structured job descriptions dataset :
             </p>
             
             Intermediate_resume:
-            <p align="center">
-            <img src="./Resources/Project documentation/Intermediate_resume_example.png" width="650" title="Intermediate_resume_example"                    alt="Intermediate_resume_example">
-            </p>
+<p align="center">
+<img src="./Resources/Project documentation/Intermediate_resume_example.png" width="650" title="Intermediate_resume_example"                    alt="Intermediate_resume_example">
+</p>
             
             High_resume:
             <p align="center">
