@@ -88,30 +88,30 @@ Our structured job descriptions dataset :
     </p>
             
    Intermediate_resume:
-<p align="center">
-<img src="./Resources/Project documentation/Intermediate_resume_example.png" width="650" title="Intermediate_resume_example"                    alt="Intermediate_resume_example">
-</p>
+    <p align="center">
+    <img src="./Resources/Project documentation/Intermediate_resume_example.png" width="650" title="Intermediate_resume_example"                    alt="Intermediate_resume_example">
+    </p>
             
    High_resume:
-<p align="center">
-<img src="./Resources/Project documentation/High_resume_example.png" width="650" title="High_resume_example" alt="High_resume_example">
-</p>
+    <p align="center">
+    <img src="./Resources/Project documentation/High_resume_example.png" width="650" title="High_resume_example" alt="High_resume_example">
+    </p>
             
    High_plus_resume:
-<p align="center">
-<img src="./Resources/Project documentation/High_plus_resume_example.png" width="650" title="High_plus_resume_example" alt="High_plus_resume_example">
-</p>
+    <p align="center">
+    <img src="./Resources/Project documentation/High_plus_resume_example.png" width="650" title="High_plus_resume_example" alt="High_plus_resume_example">
+    </p>
             
             
    Evaluation:
    
-|                     | Semantic similarity on Word embeddings  | Semantic similarity on Sentence embeddings |
-| ------------------- | --------------------------------------- | ------------------------------------------ |
-| Lowest_resume       | 0.19                                    | 0.08                                       |
-| Low_resume          | 0.37                                    | 0.48                                       |
-| Intermediate_resume | 0.58                                    | 0.45                                       |
-| High_resume         | 0.74                                    | 0.82                                       |
-| High_plus_resume    | 0.77                                    | 0.74                                       |
+    |                     | Semantic similarity on Word embeddings  | Semantic similarity on Sentence embeddings |
+    | ------------------- | --------------------------------------- | ------------------------------------------ |
+    | Lowest_resume       | 0.19                                    | 0.08                                       |
+    | Low_resume          | 0.37                                    | 0.48                                       |
+    | Intermediate_resume | 0.58                                    | 0.45                                       |
+    | High_resume         | 0.74                                    | 0.82                                       |
+    | High_plus_resume    | 0.77                                    | 0.74                                       |
 
    Semantic similarity on word embeddings approach works better for two reasons:
    1.	It tries to find related skills if a required skill doesn’t exist in the resume
