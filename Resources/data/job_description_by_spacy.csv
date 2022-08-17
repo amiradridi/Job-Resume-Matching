@@ -1,7 +1,24 @@
 ,Qualifications,Minimum degree level,Acceptable majors,Skills
 0,"bachelor’s and/or master’s in computer science, computer engineering, or related technical discipline
 5+ years of professional software development experience
-proficiency in java or c++",BS-LEVEL,"['computer science', 'computer engineering', 'software development']","['java', 'c++']"
+proficiency in java or c++",BS-LEVEL,"['computer science', 'computer engineering', 'software development']","['engineering',
+ 'business',
+ 'data analysis',
+ 'database',
+ 'computer science',
+ 'artificial intelligence',
+ 'ai',
+ 'bi',
+ 'tableau',
+ 'python',
+ 'matlab',
+ 'data visualization',
+ 'communication',
+ 'algorithm',
+ 'machine learning',
+ 'data mining',
+ 'anomaly detection',
+ 'training']"
 1,"b.a. or b.s. in computer science, information technology, or related discipline (m.s. preferred)
 over 5 years of software engineering or related experience
 over 3 years of software development experience
@@ -22,7 +39,7 @@ experience with test-driven development and automated testing frameworks
 experience with scrum/agile development methodologies
 capable of delivering on multiple competing priorities with little supervision
 experience with infrastructure automation technologies like docker, vagrant, etc.
-experience with build automation (maven, jenkins, etc.), monitoring (nagios, ganglia, etc.), apis, and services using rest, soap, etc.",BS-LEVEL,['computer science'],"['hadoop', 'hive', 'pig', 'spark', 'sqoop', 'kafka', 'flume', 'devops', 'docker', 'vagrant', 'maven', 'jenkins']"
+experience with build automation (maven, jenkins, etc.), monitoring (nagios, ganglia, etc.), apis, and services using rest, soap, etc.",BS-LEVEL,['computer science'],"['hadoop', 'hive', 'pig', 'spark', 'sqoop', 'kafka', 'flume', 'devops', 'docker', 'vagrant', 'maven', 'jenkins', 'apache-hadoop', 'apache-spark', 'laravel', 'node.js','database','python', 'android', 'flask','opencv', 'deep-learning']"
 3,"bachelor’s and/or master’s in computer science, computer engineering, or related technical discipline
 5+ years of professional software development experience
 proficiency in java or c++

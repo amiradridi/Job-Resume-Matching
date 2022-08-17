@@ -54,7 +54,7 @@ async def matching():
     jobs = pd.read_csv('Resources/data/job_description_by_spacy.csv', index_col=0)
     resumes = pd.read_csv('Resources/data/resumes_by_spacy.csv', index_col=0)
     rules = Rules(labels, resumes, jobs)
-    job_index = 3
+    job_index = 0
     resumes_matched = rules.matching_score(resumes, jobs, job_index)
 
     # adding matched resumes to database
@@ -63,6 +63,7 @@ async def matching():
         id_resume = resumes_matched['_id'][i]
         degree_matching = float(resumes_matched['Degree job ' + str(job_index) + ' matching'][i])
         major_matching = float(resumes_matched['Major job ' + str(job_index) + ' matching'][i])
+        skills_semantic_matching = float(resumes_matched['Skills job ' + str(job_index) + ' semantic matching'][i])
         skills_matching = float(resumes_matched['Skills job ' + str(job_index) + ' matching'][i])
         matching_score = float(resumes_matched['matching score job ' + str(job_index)][i])
         matched_resume = ResumeMatchedModel(id_resume=id_resume if id_resume else '',
@@ -70,6 +71,8 @@ async def matching():
                                             degree_matching=degree_matching if degree_matching else 0,
                                             major_matching=major_matching if major_matching else 0,
                                             skills_matching=skills_matching if skills_matching else 0,
+                                            skills_semantic_matching=skills_semantic_matching
+                                            if skills_semantic_matching else 0,
                                             matching_score=matching_score if matching_score else 0)
         matched_resume = jsonable_encoder(matched_resume)
         new_matched_resume = await database.get_collection("matches").insert_one(matched_resume)

@@ -1,5 +1,7 @@
 import ast
 from Resources import DEGREES_IMPORTANCE
+from sentence_transformers import SentenceTransformer
+from sklearn.metrics.pairwise import cosine_similarity
 
 class Rules:
 
@@ -103,10 +105,34 @@ class Rules:
             resumes.loc[i, 'Skills job ' + str(job_index) + ' matching'] = round(len(common_skills) / num_unique_job_skills,2)
         return resumes
 
+    def semantic_similarity(self, job, resume):
+        model = SentenceTransformer('all-mpnet-base-v2')
+        # Encoding:
+        score = 0
+        sen = job + resume
+        sen_embeddings = model.encode(sen)
+        for i in range(len(job)):
+            if job[i] in resume:
+                score += 1
+            else:
+                if max(cosine_similarity([sen_embeddings[i]], sen_embeddings[len(job):])[0]) >= 0.4:
+                    score += max(cosine_similarity([sen_embeddings[i]], sen_embeddings[len(job):])[0])
+                    # print(job[i],max(cosine_similarity([sen_embeddings[i]],sen_embeddings[len(job):])[0]),cosine_similarity([sen_embeddings[i]],sen_embeddings[len(job):])[0])
+        score = score / len(job)
+        return round(score, 2)
+
+    def skills_semantic_matching(self, resumes, job_index,job_skills):
+        """calculate the skills semantic matching scores between resumes and job description"""
+        resumes['Skills job ' + str(job_index) + ' semantic matching'] = 0
+        for i, row in resumes.iterrows():
+            resumes.loc[i, 'Skills job ' + str(job_index) + ' semantic matching'] = \
+                self.semantic_similarity(job_skills, resumes['skills'][i])
+        return resumes
+
     # calculate matching scores
     def matching_score(self, resumes, jobs, job_index):
+        # jobs = self.modifying_type_job(jobs)
         resumes = self.modifying_type_resume(resumes)
-        #jobs = self.modifying_type_job(jobs)
         # matching degrees
         resumes = self.degree_matching(resumes, jobs, job_index)
         # matching majors
@@ -114,11 +140,13 @@ class Rules:
         # matching skills
         num_unique_job_skills, job_skills = self.unique_job_skills(jobs, job_index)
         resumes = self.skills_matching(resumes, job_index, num_unique_job_skills, job_skills)
+        # matching skills semantically
+        resumes = self.skills_semantic_matching(resumes, job_index, job_skills)
         resumes["matching score job " + str(job_index)] = 0
         for i, row in self.resumes.iterrows():
-            skills_score = resumes['Skills job ' + str(job_index) + ' matching'][i]
+            skills_score = resumes['Skills job ' + str(job_index) + ' semantic matching'][i]
             degree_score = resumes['Degree job ' + str(job_index) + ' matching'][i]
             major_score = resumes['Major job ' + str(job_index) + ' matching'][i]
             final_score = (skills_score + degree_score + major_score) / 3
-            resumes.loc[i, "matching score job " + str(job_index)] = round(final_score,2)
+            resumes.loc[i, "matching score job " + str(job_index)] = round(final_score, 2)
         return resumes
