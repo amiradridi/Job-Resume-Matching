@@ -5,6 +5,9 @@ Matching the best profiles to a job description may be a difficult and time-cons
 In fact, the traditional way that recruiters are using to select candidates doesn't take into consideration all important details. Recruiters have to screen all the applications manually and then calculate the similarity in an efficient way.
 
 ## Solution
+<p align="center">
+  <img src="./Resources/Project documentation/ai in recruitement.png" width="650" title="AI in recruitement" alt="benefits of AI in recruitement">
+ </p>
 
 The idea is to calculate the similarity between the resume and the job description and then return the resumes with the highest similarity score.
 
