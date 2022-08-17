@@ -42,13 +42,9 @@ Our structured job descriptions dataset :
   
   * Skills section matching rules
   
-  First method Common words ratio:
-  <p align="center">
-  <img src="./Resources/Project documentation/Skills rules.png" width="650" title="Skills matching rule" alt="Skills matching rule">
-  </p>
-  Second method semantic similarity: 
+  Semantic similarity: 
   
-  In this part, we will use semantic similarity-based approach to match resumes and jobs.
+  In this part, we will use semantic similarity-based approach to match resumes' skills and jobs' skills.
   Semantic similarity approach is the task of searching for documents or sentences (resumes) which contain semantically similar content to a search document           (the job description).
   
   The steps that we followed are:
