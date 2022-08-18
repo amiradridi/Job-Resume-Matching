@@ -150,7 +150,7 @@ Our structured job descriptions dataset :
     
     
 
-  ***Semantic similarity on word embeddings approach works better for two reasons:
+  ***Semantic similarity on word embeddings approach works better for two reasons:***
    1.	It tries to find related skills if a required skill doesn’t exist in the resume
    2.	It values the fact that a resume has plus skills while sentence-based approach makes the resume’s vector representation with plus skills far a way                   from the job description
 
