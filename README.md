@@ -11,7 +11,7 @@ In fact, the traditional way that recruiters are using to select candidates does
 
 The idea is to calculate the similarity between the resume and the job description and then return the resumes with the highest similarity score.
 
-## **1st step: information retrieval**
+## 1st step: information retrieval
   Information Extraction is the task of automatically extracting structured information such as entities, relationships between entities, and attributes describing
 entities from unstructured sources. Our system uses spacy PhraseMatcher to extract the information from job descriptions.
 We prepared a dictionary that has all education degrees categories, all majors and skills categories related to computer engineering field. We fed that dictionary to the Spacy rule-based PhraseMatcher in order to detect and recognize entities in our job description.
@@ -30,17 +30,17 @@ Our structured job descriptions dataset :
 ## 2nd step: Matching rules
   We implemented matching rules to calculate the similarity between the resume and the job description. Those matching rules don't only use simple keywords matching but also ontology matching techniques.
  
-  ###### **Education section matching rules**
+  ###### Education section matching rules
   <p align="center">
   <img src="./Resources/Project documentation/Education rules.png" width="650" title="Education matching rule" alt="Education matching rule">
   </p>
   
-  ###### **Majors section matching rules**
+  ### Majors section matching rules
   <p align="center">
   <img src="./Resources/Project documentation/Majors rules.png" width="600" title="Majors matching rule" alt="Majors matching rule">
   </p>
   
-  ###### Skills section matching rules
+  #### Skills section matching rules
   
   
   In this part, we will use semantic similarity-based approach to match resumes' skills and jobs' skills.
