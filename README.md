@@ -175,5 +175,6 @@ Our structured job descriptions dataset :
  <p><a href="https://arxiv.org/abs/1908.10084">Sentence-BERT: Sentence Embeddings using Siamese BERT-Networks paper</a></p>
  <p><a href="https://www.sbert.net/docs/pretrained_models.html">Sbert pretrained models official documentation</a></p>
  <p><a href="https://pypi.org/project/sentence-transformers/0.3.2/">Sentence embeddings documentation</a></p>
+ [Sentence embeddings documentation](https://pypi.org/project/sentence-transformers/0.3.2/))
 
 
