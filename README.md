@@ -154,7 +154,7 @@ Our structured job descriptions dataset :
    1.	It tries to find related skills if a required skill doesn’t exist in the resume
    2.	It values the fact that a resume has plus skills while sentence-based approach makes the resume’s vector representation with plus skills far a way                   from the job description
 
-  <p>Visit <a href="https://github.blog/2013-01-31-relative-links-in-markup-files/">this notebook</a> for the full code</p>
+  <p>Visit <a href="https://github.blog/2013-01-31-relative-links-in-markup-files/">this notebook</a> for the full code of the semantic similarity approach</p>
 
   
 
