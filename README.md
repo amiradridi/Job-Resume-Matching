@@ -60,6 +60,8 @@ Our structured job descriptions dataset :
    <img src="./Resources/Project documentation/sbert_models_differences.png" width="650" title="sbert_models_differences" alt="sbert_models_differences">
    </p>
    
+   Embeddings are a key part of modern NLP, they encode the meaning of words or other linguistic units into vectors of numbers.
+   
   2. We compare those embeddings with cosine similarity to find the nearest resumes to the job description
      Cosine similarity is defined as the inner product of two vectors divided by the product of their length. Cosine similarity is defined as:
      <p align="center">
