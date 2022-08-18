@@ -62,6 +62,14 @@ Our structured job descriptions dataset :
   <img src="./Resources/Project documentation/evaluation_gpt.png" width="650" title="evaluation_gpt" alt="evaluation_gpt">
   </p>
   
+  
+  GPT3 and SBERT matching skills results comparaison:
+  
+  <p align="center">
+  <img src="./Resources/Project documentation/evaluation_gpt_sbert.png" width="650" title="evaluation_gpt_sbert" alt="evaluation_gpt_sbert">
+  </p>
+  
+  
   GPT3 doesn't make obvious difference between skills and it affects a high similarity score to all skills even dissimilar ones.
   
   
@@ -146,6 +154,7 @@ Our structured job descriptions dataset :
    1.	It tries to find related skills if a required skill doesn’t exist in the resume
    2.	It values the fact that a resume has plus skills while sentence-based approach makes the resume’s vector representation with plus skills far a way                   from the job description
 
+  <p>Visit <a href="https://github.blog/2013-01-31-relative-links-in-markup-files/">this notebook</a> for the full code</p>
 
   
 
