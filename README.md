@@ -42,7 +42,6 @@ Our structured job descriptions dataset :
   
   * Skills section matching rules
   
-  Semantic similarity: 
   
   In this part, we will use semantic similarity-based approach to match resumes' skills and jobs' skills.
   Semantic similarity approach is the task of searching for documents or sentences (resumes) which contain semantically similar content to a search document           (the job description).
