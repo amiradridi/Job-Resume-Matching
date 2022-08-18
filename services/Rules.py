@@ -47,7 +47,7 @@ class Rules:
             resumes.loc[i, 'Degree job ' + str(job_index) + ' matching'] = self.assign_degree_match(match_scores)
         return resumes
 
-    # matching majors
+    # majors matching
     def get_major_category(self, major):
         """get a major's category"""
         categories = self.labels['MAJOR'].keys()
@@ -83,7 +83,7 @@ class Rules:
             resumes.loc[i, 'Major job ' + str(job_index) + ' matching'] = self.get_major_score(resumes, i, jobs, job_index)
         return resumes
 
-    # matching skills
+    # skills matching
     @staticmethod
     def unique_job_skills(jobs, job_index):
         """calculate number of unique skills in the job description"""
@@ -93,17 +93,6 @@ class Rules:
                 unique_job_skills.append(i)
         num_unique_job_skills = len(unique_job_skills)
         return num_unique_job_skills, unique_job_skills
-
-    def skills_matching(self, resumes, job_index, num_unique_job_skills, unique_job_skills):
-        """calculate the skills matching scores between resumes and job description"""
-        resumes['Skills job ' + str(job_index) + ' matching'] = 0
-        for i, row in resumes.iterrows():
-            common_skills = []
-            for skill in resumes['skills'][i]:
-                if (skill not in common_skills) and (skill in unique_job_skills):
-                    common_skills.append(skill)
-            resumes.loc[i, 'Skills job ' + str(job_index) + ' matching'] = round(len(common_skills) / num_unique_job_skills,2)
-        return resumes
 
     def semantic_similarity(self, job, resume):
         model = SentenceTransformer('all-mpnet-base-v2')
@@ -139,7 +128,6 @@ class Rules:
         resumes = self.major_matching(resumes, jobs, job_index)
         # matching skills
         num_unique_job_skills, job_skills = self.unique_job_skills(jobs, job_index)
-        resumes = self.skills_matching(resumes, job_index, num_unique_job_skills, job_skills)
         # matching skills semantically
         resumes = self.skills_semantic_matching(resumes, job_index, job_skills)
         resumes["matching score job " + str(job_index)] = 0
