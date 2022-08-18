@@ -30,17 +30,17 @@ Our structured job descriptions dataset :
 ## 2nd step: Matching rules
   We implemented matching rules to calculate the similarity between the resume and the job description. Those matching rules don't only use simple keywords matching but also ontology matching techniques.
  
-  * Education section matching rules
+  ###### Education section matching rules
   <p align="center">
   <img src="./Resources/Project documentation/Education rules.png" width="650" title="Education matching rule" alt="Education matching rule">
   </p>
   
-  * Majors section matching rules
+  ###### Majors section matching rules
   <p align="center">
   <img src="./Resources/Project documentation/Majors rules.png" width="600" title="Majors matching rule" alt="Majors matching rule">
   </p>
   
-  * Skills section matching rules
+  ###### Skills section matching rules
   
   
   In this part, we will use semantic similarity-based approach to match resumes' skills and jobs' skills.
