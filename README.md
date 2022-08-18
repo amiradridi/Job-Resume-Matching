@@ -11,7 +11,7 @@ In fact, the traditional way that recruiters are using to select candidates does
 
 The idea is to calculate the similarity between the resume and the job description and then return the resumes with the highest similarity score.
 
-###### 1st step: information retrieval
+###### **1st step: information retrieval**
   Information Extraction is the task of automatically extracting structured information such as entities, relationships between entities, and attributes describing
 entities from unstructured sources. Our system uses spacy PhraseMatcher to extract the information from job descriptions.
 We prepared a dictionary that has all education degrees categories, all majors and skills categories related to computer engineering field. We fed that dictionary to the Spacy rule-based PhraseMatcher in order to detect and recognize entities in our job description.
@@ -27,7 +27,7 @@ Our structured job descriptions dataset :
   <img src="./Resources/Project documentation/Job data.png" width="650" title="Job descriptions dataset" alt="Job descriptions dataset">
  </p>
 
-###### 2nd step: Matching rules
+## **2nd step: Matching rules**
   We implemented matching rules to calculate the similarity between the resume and the job description. Those matching rules don't only use simple keywords matching but also ontology matching techniques.
  
   * Education section matching rules
@@ -70,7 +70,7 @@ Our structured job descriptions dataset :
   </p>
   
   
-  GPT3 doesn't make obvious difference between skills and it affects a high similarity score to all skills even dissimilar ones.
+  ***GPT3 doesn't make obvious difference between skills and it affects a high similarity score to all skills even dissimilar ones.***
   
   
   The steps that we followed later on to calculate the similarity between the job and the resume:
@@ -150,7 +150,7 @@ Our structured job descriptions dataset :
     
     
 
-   Semantic similarity on word embeddings approach works better for two reasons:
+   ***Semantic similarity on word embeddings approach works better for two reasons:
    1.	It tries to find related skills if a required skill doesn’t exist in the resume
    2.	It values the fact that a resume has plus skills while sentence-based approach makes the resume’s vector representation with plus skills far a way                   from the job description
 
