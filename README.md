@@ -161,3 +161,19 @@ Our structured job descriptions dataset :
  
 * 3rd step: 
   We Calculated the final similarity score and returned the resumes with the highest similarity score.
+  
+  
+ ## Project summary
+ 
+ 1. We retrieved information from the job description using Spacy brule-based PhraseMatcher
+ 2. We implemented matching rules for the degrees' levels and the acceptable majors
+ 3. We compared between two powerful word embedding models gpt3 and sbert 'all-mpnet-base-v2' and we chose sbert for its efficiency
+ 4. We compared between word embedding and sentence embedding approaches and we chose word embedding as it produces accurate semantic similarity
+
+ ## References
+ 
+ <p>Sentence-BERT: Sentence Embeddings using Siamese BERT-Networks paper <a href="https://arxiv.org/abs/1908.10084"></a></p>
+ <p>Sbert pretrained models official documentation <a href="https://www.sbert.net/docs/pretrained_models.html"></a></p>
+ <p>Sentence embeddings documentation <a href="https://pypi.org/project/sentence-transformers/0.3.2/"></a></p>
+
+
