@@ -13,6 +13,8 @@ class Rules:
 
     def modifying_type_resume(self, resumes):
         for i in range(len(resumes["degrees"])):
+            print(i)
+            print(type(resumes["degrees"][i]))
             resumes["degrees"][i] = ast.literal_eval(resumes["degrees"][i])
         for i in range(len(resumes["skills"])):
             resumes["skills"][i] = ast.literal_eval(resumes["skills"][i])
@@ -120,8 +122,6 @@ class Rules:
 
     # calculate matching scores
     def matching_score(self, resumes, jobs, job_index):
-        # jobs = self.modifying_type_job(jobs)
-        resumes = self.modifying_type_resume(resumes)
         # matching degrees
         resumes = self.degree_matching(resumes, jobs, job_index)
         # matching majors
@@ -131,10 +131,11 @@ class Rules:
         # matching skills semantically
         resumes = self.skills_semantic_matching(resumes, job_index, job_skills)
         resumes["matching score job " + str(job_index)] = 0
+        resumes["job index"] = job_index
         for i, row in self.resumes.iterrows():
             skills_score = resumes['Skills job ' + str(job_index) + ' semantic matching'][i]
             degree_score = resumes['Degree job ' + str(job_index) + ' matching'][i]
             major_score = resumes['Major job ' + str(job_index) + ' matching'][i]
             final_score = (skills_score + degree_score + major_score) / 3
-            resumes.loc[i, "matching score job " + str(job_index)] = round(final_score, 2)
+            resumes.loc[i, "matching score job " + str(job_index)] = round(final_score, 3)
         return resumes

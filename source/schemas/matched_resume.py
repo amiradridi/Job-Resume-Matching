@@ -24,7 +24,6 @@ class ResumeMatchedModel(BaseModel):
     job_index: int = Field(...)
     degree_matching: float = Field(...)
     major_matching: float = Field(...)
-    skills_matching: float = Field(...)
     skills_semantic_matching: float = Field(...)
     matching_score: float = Field(...)
 

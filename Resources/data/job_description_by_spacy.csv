@@ -1,15 +1,11 @@
 ,Qualifications,Minimum degree level,Acceptable majors,Skills
 0,"bachelor’s and/or master’s in computer science, computer engineering, or related technical discipline
 5+ years of professional software development experience
-proficiency in java or c++",BS-LEVEL,"['computer science', 'computer engineering', 'software development']","['engineering',
- 'business',
- 'data analysis',
+proficiency in java or c++",BS-LEVEL,"['computer science', 'computer engineering', 'software development','artificial intelligence']","['data analysis',
  'database',
  'computer science',
  'artificial intelligence',
  'ai',
- 'bi',
- 'tableau',
  'python',
  'matlab',
  'data visualization',
@@ -30,7 +26,24 @@ strong knowledge of software design, documentation, and testing
 project management knowledge (requirements, design, planning)
 knowledge of software architecture (preferred)
 experience coaching and mentoring junior team members (preferred)
-music industry experience (preferred)",BS-LEVEL,"['computer science', 'information technology', 'software engineering', 'software development', 'programming']","['java', 'python', 'c++']"
+music industry experience (preferred)",MS-LEVEL,"['computer science', 'information technology', 'software engineering', 'software development', 'programming','artificial intelligence']","['engineering',
+ 'business',
+ 'data analysis',
+ 'database',
+ 'computer science',
+ 'artificial intelligence',
+ 'ai',
+ 'bi',
+ 'tableau',
+ 'python',
+ 'matlab',
+ 'data visualization',
+ 'communication',
+ 'algorithm',
+ 'machine learning',
+ 'data mining',
+ 'anomaly detection',
+ 'training']"
 2,"bachelor’s in computer science or equivalent experience
 3 to 5 years of experience in b2b
 hands-on experience working with technologies like hadoop, hive, pig, spark, sqoop, kafka, flume, etc.
@@ -54,4 +67,4 @@ proficiency in java or c++, and object-oriented design skills
 application architecture and design patterns
 experience serving as technical lead throughout the full software development lifecycle, from conception, architecture definition, detailed design, scoping, planning, implementation, testing to documentation, delivery and maintenance is preferred
 knowledge of professional software engineering and best practices for the full software development life cycle, including coding standards, code reviews, source control management, build processes, testing, and operations
-experience in development of distributed/scalable systems and high-volume transaction applications",BS-LEVEL,"['computer science', 'computer engineering', 'software development', 'software engineering']","['java', 'c++', 'object-oriented design', 'application architecture and design', 'coding standards', 'code reviews']"
+experience in development of distributed/scalable systems and high-volume transaction applications",BS-LEVEL,"['computer science', 'computer engineering', 'software development', 'software engineering']","['natural language processing', 'python', 'artificial intelligence', 'computer sciences', 'coding standards', 'code reviews']"
