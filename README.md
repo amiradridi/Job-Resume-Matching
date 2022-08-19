@@ -42,17 +42,40 @@ Our structured job descriptions dataset :
   
   * Skills section matching rules
   
-  First method Common words ratio:
-  <p align="center">
-  <img src="./Resources/Project documentation/Skills rules.png" width="650" title="Skills matching rule" alt="Skills matching rule">
-  </p>
-  Second method semantic similarity: 
   
-  In this part, we will use semantic similarity-based approach to match resumes and jobs.
+  In this part, we will use semantic similarity-based approach to match resumes' skills and jobs' skills.
   Semantic similarity approach is the task of searching for documents or sentences (resumes) which contain semantically similar content to a search document           (the job description).
   
-  The steps that we followed are:
-  1. We derive semantically meaningful word and sentence embeddings using the best Siamese BERT-Networks pretrained model ‘all-mpnet-base-v2’ that has these             specificities:
+  We tried different pre-trained models to embed our words (GPT3 and SBERT 'all-mpnet-base-v2').
+  Embeddings are a key part of modern NLP, they encode the meaning of words or other linguistic units into vectors of numbers.
+  We evaluated the results on 27 skills and we chose the sbert model since it gives better semantic similarity and dissimilarity with respect to the skills           vocabulary context as shown below:
+  
+  SBERT skills matching results:
+  
+  <p align="center">
+  <img src="./Resources/Project documentation/evaluation_sbert.png" width="650" title="evaluation_sbert" alt="evaluation_sbert">
+  </p>
+  
+  GPT3 skills matching results:
+  
+  <p align="center">
+  <img src="./Resources/Project documentation/evaluation_gpt.png" width="650" title="evaluation_gpt" alt="evaluation_gpt">
+  </p>
+  
+  
+  GPT3 and SBERT matching skills results comparaison:
+  
+  <p align="center">
+  <img src="./Resources/Project documentation/evaluation_gpt_sbert.png" width="650" title="evaluation_gpt_sbert" alt="evaluation_gpt_sbert">
+  </p>
+  
+  
+  GPT3 doesn't make obvious difference between skills and it affects a high similarity score to all skills even dissimilar ones.
+  
+  
+  The steps that we followed later on to calculate the similarity between the job and the resume:
+  
+  1. We derive semantically meaningful word and sentence embeddings using the chosen Siamese BERT-Networks pretrained model ‘all-mpnet-base-v2’ that has these             specificities:
    <p align="center">
    <img src="./Resources/Project documentation/pre-trained sbert model.png" width="650" title="pre-trained sbert model" alt="pre-trained sbert model">
    </p>
@@ -60,7 +83,6 @@ Our structured job descriptions dataset :
    <img src="./Resources/Project documentation/sbert_models_differences.png" width="650" title="sbert_models_differences" alt="sbert_models_differences">
    </p>
    
-   Embeddings are a key part of modern NLP, they encode the meaning of words or other linguistic units into vectors of numbers.
    
   2. We compare those embeddings with cosine similarity to find the nearest resumes to the job description
      Cosine similarity is defined as the inner product of two vectors divided by the product of their length. Cosine similarity is defined as:
@@ -132,7 +154,9 @@ Our structured job descriptions dataset :
    1.	It tries to find related skills if a required skill doesn’t exist in the resume
    2.	It values the fact that a resume has plus skills while sentence-based approach makes the resume’s vector representation with plus skills far a way                   from the job description
 
+  <p>Visit <a href="https://github.blog/2013-01-31-relative-links-in-markup-files/">this notebook</a> for the full code of the semantic similarity approach.</p>
 
+  
 
  
 * 3rd step: 
