@@ -1,17 +1,17 @@
 # Job Resume Matching Project
 
-## Problem
+# Problem
 Matching the best profiles to a job description may be a difficult and time-consuming task.
 In fact, the traditional way that recruiters are using to select candidates doesn't take into consideration all important details. Recruiters have to screen all the applications manually and then calculate the similarity in an efficient way.
 
-## Solution
+# Solution
 <p align="center">
   <img src="./Resources/Project documentation/ai in recruitement.png" width="650" title="AI in recruitement" alt="benefits of AI in recruitement">
  </p>
 
 The idea is to calculate the similarity between the resume and the job description and then return the resumes with the highest similarity score.
 
-* 1st step: information retrieval
+## 1st step: information retrieval
   Information Extraction is the task of automatically extracting structured information such as entities, relationships between entities, and attributes describing
 entities from unstructured sources. Our system uses spacy PhraseMatcher to extract the information from job descriptions.
 We prepared a dictionary that has all education degrees categories, all majors and skills categories related to computer engineering field. We fed that dictionary to the Spacy rule-based PhraseMatcher in order to detect and recognize entities in our job description.
@@ -27,20 +27,20 @@ Our structured job descriptions dataset :
   <img src="./Resources/Project documentation/Job data.png" width="650" title="Job descriptions dataset" alt="Job descriptions dataset">
  </p>
 
-* 2nd step: Matching rules
+## 2nd step: Matching rules
   We implemented matching rules to calculate the similarity between the resume and the job description. Those matching rules don't only use simple keywords matching but also ontology matching techniques.
  
-  * Education section matching rules
+  #### * Education section matching rules
   <p align="center">
   <img src="./Resources/Project documentation/Education rules.png" width="650" title="Education matching rule" alt="Education matching rule">
   </p>
   
-  * Majors section matching rules
+  #### * Majors section matching rules
   <p align="center">
   <img src="./Resources/Project documentation/Majors rules.png" width="600" title="Majors matching rule" alt="Majors matching rule">
   </p>
   
-  * Skills section matching rules
+  #### * Skills section matching rules
   
   
   In this part, we will use semantic similarity-based approach to match resumes' skills and jobs' skills.
@@ -70,7 +70,7 @@ Our structured job descriptions dataset :
   </p>
   
   
-  GPT3 doesn't make obvious difference between skills and it affects a high similarity score to all skills even dissimilar ones.
+  ***GPT3 doesn't make obvious difference between skills and it affects a high similarity score to all skills even dissimilar ones.***
   
   
   The steps that we followed later on to calculate the similarity between the job and the resume:
@@ -93,15 +93,15 @@ Our structured job descriptions dataset :
           
    We tried that approach on both skills words and skills sentences of four resumes’ levels: 
    
-    * Lowest_resume: resume skills are far away from the job description required skills 
+   * Lowest_resume: resume skills are far away from the job description required skills 
          
-    * Low_resume: resume skills are a bit far from the job description required skills
+   * Low_resume: resume skills are a bit far from the job description required skills
          
-    * Intermediate_resume: resume skills are related to the job description skills
+   * Intermediate_resume: resume skills are related to the job description skills
          
-    * High_resume: most resume skills exist or relate very well with the job description required skills
+   * High_resume: most resume skills exist or relate very well with the job description required skills
          
-    * High_plus_resume: most resume skills existor relate very well with the job description required skills and there are extra skills
+   * High_plus_resume: most resume skills existor relate very well with the job description required skills and there are extra skills
          
    These are our samples:
            
@@ -150,14 +150,30 @@ Our structured job descriptions dataset :
     
     
 
-   Semantic similarity on word embeddings approach works better for two reasons:
+  ***Semantic similarity on word embeddings approach works better for two reasons:***
    1.	It tries to find related skills if a required skill doesn’t exist in the resume
    2.	It values the fact that a resume has plus skills while sentence-based approach makes the resume’s vector representation with plus skills far a way                   from the job description
 
-  <p>Visit <a href="https://github.blog/2013-01-31-relative-links-in-markup-files/">this notebook</a> for the full code of the semantic similarity approach.</p>
+  <p>Visit <a href="https://github.com/amiradridi/Job-Resume-Matching/blob/master/services/Semantic%20similarity.ipynb">this notebook</a> for the full code of the semantic similarity approach.</p>
 
   
 
  
 * 3rd step: 
   We Calculated the final similarity score and returned the resumes with the highest similarity score.
+  
+  
+ ## Project summary
+ 
+ 1. We retrieved information from the job description using Spacy brule-based PhraseMatcher
+ 2. We implemented matching rules for the degrees' levels and the acceptable majors
+ 3. We compared between two powerful word embedding models gpt3 and sbert 'all-mpnet-base-v2' and we chose sbert for its efficiency
+ 4. We compared between word embedding and sentence embedding approaches and we chose word embedding as it produces accurate semantic similarity
+
+ ## References
+ 
+ <p><a href="https://arxiv.org/abs/1908.10084">Sentence-BERT: Sentence Embeddings using Siamese BERT-Networks paper</a></p>
+ <p><a href="https://www.sbert.net/docs/pretrained_models.html">Sbert pretrained models official documentation</a></p>
+ <p><a href="https://pypi.org/project/sentence-transformers/0.3.2/">Sentence embeddings documentation</a></p>
+
+
