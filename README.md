@@ -140,13 +140,13 @@ Our structured job descriptions dataset :
    Evaluation:
    
    
-    |                     | Semantic similarity on Word embeddings  | Semantic similarity on Sentence embeddings |
-    | ------------------- | --------------------------------------- | ------------------------------------------ |
-    | Lowest_resume       | 0.19                                    | 0.08                                       |
-    | Low_resume          | 0.37                                    | 0.48                                       |
-    | Intermediate_resume | 0.58                                    | 0.45                                       |
-    | High_resume         | 0.74                                    | 0.82                                       |
-    | High_plus_resume    | 0.77                                    | 0.74                                       |
+ |                     | Semantic similarity on Word embeddings  | Semantic similarity on Sentence embeddings |
+ | ------------------- | --------------------------------------- | ------------------------------------------ |
+ | Lowest_resume       | 0.19                                    | 0.08                                       |
+ | Low_resume          | 0.37                                    | 0.48                                       |
+ | Intermediate_resume | 0.58                                    | 0.45                                       |
+ | High_resume         | 0.74                                    | 0.82                                       |
+ | High_plus_resume    | 0.77                                    | 0.74                                       |
     
     
 
