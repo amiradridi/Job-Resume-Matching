@@ -4,7 +4,6 @@ import pandas as pd
 import json
 from services.JobInfoExtraction import JobInfoExtraction
 from services.Rules import Rules
-from spacy.lang.en import English
 from source.db_helpers.db_connection import database
 from source.schemas.matched_resume import ResumeMatchedModel
 from source.schemas.jobextracted import JobExtractedModel
@@ -26,15 +25,14 @@ app = FastAPI()
 
 @app.get("/extraction")
 async def extraction():
-    with open('Resources/data/labels.json') as fp:
-        labels = json.load(fp)
+    degrees_patterns_path = 'Resources/data/degrees.jsonl'
+    majors_patterns_path = 'Resources/data/majors.jsonl'
+    skills_patterns_path = 'Resources/data/skills.jsonl'
     jobs = pd.read_csv('Resources/data/job descriptions.csv', index_col=0)
     jobs = jobs[['Qualifications']]
-    nlp = English()
-    job_extraction = JobInfoExtraction(labels, jobs, nlp)
+    job_extraction = JobInfoExtraction(skills_patterns_path, majors_patterns_path, degrees_patterns_path, jobs)
     jobs = job_extraction.extract_entities(jobs)
     for i, row in jobs.iterrows():
-
         minimum_degree_level = jobs['Minimum degree level'][i]
         acceptable_majors = jobs['Acceptable majors'][i]
         skills = jobs['Skills'][i]

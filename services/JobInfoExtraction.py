@@ -1,75 +1,69 @@
-import pickle
-from spacy.matcher import PhraseMatcher
-from spacy.tokens import Span
-from Resources import ENTITIES
 from Resources import DEGREES_IMPORTANCE
+from spacy.lang.en import English
 
 
 class JobInfoExtraction:
 
-    def __init__(self, labels, jobs, nlp):
-        self.labels = labels
+    def __init__(self, skills_patterns_path, majors_patterns_path, degrees_patterns_path, jobs):
         self.jobs = jobs[['Qualifications']]
-        self.nlp = nlp
-        self.entities = ENTITIES
+        self.skills_patterns_path = skills_patterns_path
+        self.majors_patterns_path = majors_patterns_path
+        self.degrees_patterns_path = degrees_patterns_path
         self.degrees_importance = DEGREES_IMPORTANCE
 
-    def add_section_patterns(self, entities, section, matcher):
-        """add section patterns to the matcher"""
-        sub_sections = []
-        for key, value in self.labels[section].items():
-            sub_sections.append(key)
-            # if section != "SKILL":
-                # sections[key] = section
-        for sub_section in sub_sections:
-            entities.append(sub_section)
-            sub_section_pattern_name = str(sub_section)
-            pattern_name = str(sub_section) + '-' + 'patterns'
-            pattern_name = []
-            for j in self.labels[section][sub_section]:
-                pattern_name.append(self.nlp(j))
-            matcher.add(sub_section_pattern_name, pattern_name)
-        return entities
+    @staticmethod
+    def match_majors_by_spacy(self, job):
+        nlp = English()
+        # Add the pattern to the matcher
+        patterns_path = self.majors_patterns_path
+        ruler = nlp.add_pipe("entity_ruler")
+        ruler.from_disk(patterns_path)
+        # Process some text
+        doc1 = nlp(job)
+        acceptable_majors = []
+        for ent in doc1.ents:
+            labels_parts = ent.label_.split('|')
+            if labels_parts[0] == 'MAJOR':
+                if labels_parts[2].replace('-', ' ') not in acceptable_majors:
+                    acceptable_majors.append(labels_parts[2].replace('-', ' '))
+                if labels_parts[2].replace('-', ' ') not in acceptable_majors:
+                    acceptable_majors.append(labels_parts[2].replace('-', ' '))
+        return acceptable_majors
 
-    def build_matcher(self, section):
-        """building section's matcher"""
-        matcher = PhraseMatcher(self.nlp.vocab)
-        entities = []
-        # adding section entity and patterns
+    @staticmethod
+    def match_degrees_by_spacy(self, job):
+        nlp = English()
+        # Add the pattern to the matcher
+        patterns_path = self.degrees_patterns_path
+        ruler = nlp.add_pipe("entity_ruler")
+        ruler.from_disk(patterns_path)
+        # Process some text
+        doc1 = nlp(job)
+        degree_levels = []
+        for ent in doc1.ents:
+            labels_parts = ent.label_.split('|')
+            if labels_parts[0] == 'DEGREE':
+                print((ent.text, ent.label_))
+                if labels_parts[1] not in degree_levels:
+                    degree_levels.append(labels_parts[1])
+        return degree_levels
 
-        entities = self.add_section_patterns(entities, section, matcher)
-        return matcher, entities
-
-    def get_matcher(self, section):
-        """loading matcher
-        with open('Resources/models/' +str(section) + 'matcher.pkl', 'rb') as f:
-            my_matcher = pickle.load(f)"""
-        my_matcher, entities = self.build_matcher(section)
-        return my_matcher
-
-    def match_by_spacy(self, nlp, job, section):
-        """applying matcher to extract entities"""
-        for i in self.entities:
-            nlp.vocab.strings.add(str(i))
-        text = job.lower()
-        doc = nlp(text)
-        matcher = self.get_matcher(section)
-        matches = matcher(doc)
-        result = []
-
-        for match_id, start, end in matches:
-            # create a new Span for each match
-            span = Span(doc, start, end, label=match_id)
-            doc.ents = list(doc.ents) + [span]  # add span to doc.ents
-            label = nlp.vocab.strings[match_id]
-            item = span.text
-            if (section == "MAJOR") and (item not in result):
-                result.append(item)
-            elif (section == "DEGREE") and (label not in result):
-                result.append(label)
-            elif section == "SKILL":
-                result.append(item)
-        return result
+    @staticmethod
+    def match_skills_by_spacy(self, job):
+        nlp = English()
+        patterns_path = self.skills_patterns_path
+        ruler = nlp.add_pipe("entity_ruler")
+        ruler.from_disk(patterns_path)
+        # Process some text
+        doc1 = nlp(job)
+        job_skills = []
+        for ent in doc1.ents:
+            labels_parts = ent.label_.split('|')
+            if labels_parts[0] == 'SKILL':
+                print((ent.text, ent.label_))
+                if labels_parts[1].replace('-', ' ') not in job_skills:
+                    job_skills.append(labels_parts[1].replace('-', ' '))
+        return job_skills
 
     @staticmethod
     def get_minimum_degree(self, degrees):
@@ -84,8 +78,8 @@ class JobInfoExtraction:
         jobs['Skills'] = ""
         for i, row in jobs.iterrows():
             job = jobs['Qualifications'][i].replace('. ', ' ')
-            degrees = self.match_by_spacy(self.nlp, job, "DEGREE")
-            jobs['Minimum degree level'][i] = self.get_minimum_degree(self,degrees)
-            jobs['Acceptable majors'][i] = self.match_by_spacy(self.nlp, job, "MAJOR")
-            jobs['Skills'][i] = self.match_by_spacy(self.nlp, job, "SKILL")
+            degrees = self.match_degrees_by_spacy(self, job)
+            jobs['Minimum degree level'][i] = self.get_minimum_degree(self, degrees)
+            jobs['Acceptable majors'][i] = self.match_majors_by_spacy(self, job)
+            jobs['Skills'][i] = self.match_skills_by_spacy(self, job)
         return jobs

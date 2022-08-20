@@ -1,0 +1,28 @@
+{"label": "DEGREE|BS-LEVEL", "pattern": [{"LOWER": "bachelors"}]}
+{"label": "DEGREE|BS-LEVEL", "pattern": [{"LOWER": "bachelor's"}]}
+{"label": "DEGREE|BS-LEVEL", "pattern": [{"LOWER": "bachelor"}]}
+{"label": "DEGREE|BS-LEVEL", "pattern": [{"LOWER": "b.s"}]}
+{"label": "DEGREE|BS-LEVEL", "pattern": [{"LOWER": "b.s."}]}
+{"label": "DEGREE|BS-LEVEL", "pattern": [{"LOWER": "b.a"}]}
+{"label": "DEGREE|BS-LEVEL", "pattern": [{"LOWER": "b.a."}]}
+{"label": "DEGREE|BS-LEVEL", "pattern": [{"LOWER": "baccalaureate"}]}
+{"label": "DEGREE|BS-LEVEL", "pattern": [{"LOWER": "ba"}]}
+{"label": "DEGREE|BS-LEVEL", "pattern": [{"LOWER": "bsba"}]}
+{"label": "DEGREE|BS-LEVEL", "pattern": [{"LOWER": "ba/bs"}]}
+{"label": "DEGREE|BS-LEVEL", "pattern": [{"LOWER": "4-year"}]}
+{"label": "DEGREE|BS-LEVEL", "pattern": [{"LOWER": "4 year"}]}
+{"label": "DEGREE|BS-LEVEL", "pattern": [{"LOWER": "four year"}]}
+{"label": "DEGREE|BS-LEVEL", "pattern": [{"LOWER": "college"}]}
+{"label": "DEGREE|BS-LEVEL", "pattern": [{"LOWER": "undergraduate"}]}
+{"label": "DEGREE|BS-LEVEL", "pattern": [{"LOWER": "university"}]}
+{"label": "DEGREE|BS-LEVEL", "pattern": [{"LOWER": "bsc"}]}
+{"label": "DEGREE|BS-LEVEL", "pattern": [{"LOWER": "bs"}]}
+{"label": "DEGREE|BS-LEVEL", "pattern": [{"LOWER": "be"}]}
+{"label": "DEGREE|BS-LEVEL", "pattern": [{"LOWER": "b.e"}]}
+{"label": "DEGREE|MS-LEVEL", "pattern": [{"LOWER": "master"}]}
+{"label": "DEGREE|MS-LEVEL", "pattern": [{"LOWER": "master's"}]}
+{"label": "DEGREE|MS-LEVEL", "pattern": [{"LOWER": "ms"}]}
+{"label": "DEGREE|MS-LEVEL", "pattern": [{"LOWER": "m.s"}]}
+{"label": "DEGREE|PHD-LEVEL", "pattern": [{"LOWER": "phd"}]}
+{"label": "DEGREE|PHD-LEVEL", "pattern": [{"LOWER": "ph.d"}]}
+{"label": "DEGREE|PHD-LEVEL", "pattern": [{"LOWER": "doctorate"}]}

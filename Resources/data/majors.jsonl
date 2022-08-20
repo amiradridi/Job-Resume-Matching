@@ -1,0 +1,29 @@
+{"label": "MAJOR|DEV MAJOR|software-engineering", "pattern": [{"LOWER": "software"}, {"LOWER": "engineering"}]}
+{"label": "MAJOR|DEV MAJOR|software-development", "pattern": [{"LOWER": "software"}, {"LOWER": "development"}]}
+{"label": "MAJOR|DEV MAJOR|computer-science", "pattern": [{"LOWER": "computer"}, {"LOWER": "sciences"}]}
+{"label": "MAJOR|DEV MAJOR|computer-science", "pattern": [{"LOWER": "computer"}, {"LOWER": "science"}]}
+{"label": "MAJOR|DEV MAJOR|computer-software", "pattern": [{"LOWER": "computer"}, {"LOWER": "software"}]}
+{"label": "MAJOR|DEV MAJOR|computer-engineering", "pattern": [{"LOWER": "computer"}, {"LOWER": "engineering"}]}
+{"label": "MAJOR|DEV MAJOR|computer-programming", "pattern": [{"LOWER": "computer"}, {"LOWER": "programming"}]}
+{"label": "MAJOR|DEV MAJOR|information-systems", "pattern": [{"LOWER": "information"}, {"LOWER": "systems"}]}
+{"label": "MAJOR|DEV MAJOR|information-science", "pattern": [{"LOWER": "information"}, {"LOWER": "science"}]}
+{"label": "MAJOR|DEV MAJOR|information-science", "pattern": [{"LOWER": "information"}, {"LOWER": "sciences"}]}
+{"label": "MAJOR|DEV MAJOR|information-technology", "pattern": [{"LOWER": "information"}, {"LOWER": "technology"}]}
+{"label": "MAJOR|DEV MAJOR|systems-analysis", "pattern": [{"LOWER": "systems"}, {"LOWER": "analysis"}]}
+{"label": "MAJOR|DEV MAJOR|systems-and-network-administration", "pattern": [{"LOWER": "systems"},{"LOWER": "and"},{"LOWER": "network"}, {"LOWER": "administration"}]}
+{"label": "MAJOR|DEV MAJOR|cybersecurity", "pattern": [{"LOWER": "cybersecurity"}]}
+{"label": "MAJOR|DEV MAJOR|web-development", "pattern": [{"LOWER": "web"}, {"LOWER": "development"}]}
+{"label": "MAJOR|DEV MAJOR|network-security", "pattern": [{"LOWER": "network"}, {"LOWER": "security"}]}
+{"label": "MAJOR|DEV MAJOR|programming", "pattern": [{"LOWER": "programming"}]}
+{"label": "MAJOR|AI MAJOR|data-science", "pattern": [{"LOWER": "data"}, {"LOWER": "sciences"}]}
+{"label": "MAJOR|AI MAJOR|data-science", "pattern": [{"LOWER": "data"}, {"LOWER": "science"}]}
+{"label": "MAJOR|AI MAJOR|data-analysis", "pattern": [{"LOWER": "data"}, {"LOWER": "analysis"}]}
+{"label": "MAJOR|AI MAJOR|data-engineering", "pattern": [{"LOWER": "data"}, {"LOWER": "engineering"}]}
+{"label": "MAJOR|AI MAJOR|artificial-intelligence", "pattern": [{"LOWER": "artificial"}, {"LOWER": "intelligence"}]}
+{"label": "MAJOR|AI MAJOR|nlp", "pattern": [{"LOWER": "nlp"}]}
+{"label": "MAJOR|AI MAJOR|nlp-engineering", "pattern": [{"LOWER": "nlp"}, {"LOWER": "engineering"}]}
+{"label": "MAJOR|AI MAJOR|ai-engineering", "pattern": [{"LOWER": "ai"}, {"LOWER": "engineering"}]}
+{"label": "MAJOR|AI MAJOR|mathematics", "pattern": [{"LOWER": "mathematics"}]}
+{"label": "MAJOR|AI MAJOR|statistics", "pattern": [{"LOWER": "statistics"}]}
+{"label": "MAJOR|AI MAJOR|artificial-intelligence", "pattern": [{"LOWER": "ai"}]}
+{"label": "MAJOR|AI MAJOR|computer-vision", "pattern": [{"LOWER": "computer"}, {"LOWER": "vision"}]}
