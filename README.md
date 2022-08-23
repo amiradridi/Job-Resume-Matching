@@ -6,7 +6,7 @@ In fact, the traditional way that recruiters are using to select candidates does
 
 # Solution
 <p align="center">
-  <img src="./Resources/Project documentation/ai in recruitement.png" width="650" title="AI in recruitement" alt="benefits of AI in recruitement">
+  <img src="./Resources/Project documentation/ai in recruitement.png" width="650" title="AI in recruitment" alt="benefits of AI in recruitment">
  </p>
 
 The idea is to calculate the similarity between the resume and the job description and then return the resumes with the highest similarity score.
