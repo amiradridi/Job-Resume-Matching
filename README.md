@@ -100,7 +100,7 @@ Our structured job descriptions dataset :
     </p>
    
 
-  <p>Visit <a href="https://github.com/amiradridi/Job-Resume-Matching/blob/master/services/Semantic%20similarity.ipynb">this notebook</a> for the full code of the semantic similarity approach.</p>
+  <p>Visit <a href="https://github.com/amiradridi/Job-Resume-Matching/blob/master/services/Models%20evaluation.ipynb">this notebook</a> for the full code of the semantic similarity approach.</p>
 
   
 
