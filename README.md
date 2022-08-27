@@ -46,33 +46,9 @@ Our structured job descriptions dataset :
   In this part, we will use semantic similarity-based approach to match resumes' skills and jobs' skills.
   Semantic similarity approach is the task of searching for documents or sentences (resumes) which contain semantically similar content to a search document           (the job description).
   
-  We tried different pre-trained models to embed our words (GPT3 and SBERT 'all-mpnet-base-v2').
+  We tried different pre-trained models to embed our words ('all-mpnet-base-v2', 'paraphrase-MiniLM-L6-v2', 'gpt3','all-MiniLM-L12-v1','all-roberta-large-v1').
   Embeddings are a key part of modern NLP, they encode the meaning of words or other linguistic units into vectors of numbers.
-  We evaluated the results on 27 skills and we chose the sbert model since it gives better semantic similarity and dissimilarity with respect to the skills           vocabulary context as shown below:
-  
-  SBERT skills matching results:
-  
-  <p align="center">
-  <img src="./Resources/Project documentation/evaluation_sbert.png" width="650" title="evaluation_sbert" alt="evaluation_sbert">
-  </p>
-  
-  GPT3 skills matching results:
-  
-  <p align="center">
-  <img src="./Resources/Project documentation/evaluation_gpt.png" width="650" title="evaluation_gpt" alt="evaluation_gpt">
-  </p>
-  
-  
-  GPT3 and SBERT matching skills results comparaison:
-  
-  <p align="center">
-  <img src="./Resources/Project documentation/evaluation_gpt_sbert.png" width="650" title="evaluation_gpt_sbert" alt="evaluation_gpt_sbert">
-  </p>
-  
-  
-  ***GPT3 doesn't make obvious difference between skills and it affects a high similarity score to all skills even dissimilar ones.***
-  
-  
+
   The steps that we followed later on to calculate the similarity between the job and the resume:
   
   1. We derive semantically meaningful word and sentence embeddings using the chosen Siamese BERT-Networks pretrained model ‘all-mpnet-base-v2’ that has these             specificities:
@@ -91,68 +67,45 @@ Our structured job descriptions dataset :
      </p>
      where vectors a and b have the same number of dimensions N. Cosine similarity can be used to compare similarity between document vectors.
           
-   We tried that approach on both skills words and skills sentences of four resumes’ levels: 
+   We tried that approach on skills words of 15 resumes and 5 jobs :
+   The resumes information were extracted by a colleague on the project and jobs were extracted from a public dataset on Kaggle 
    
-   * Lowest_resume: resume skills are far away from the job description required skills 
-         
-   * Low_resume: resume skills are a bit far from the job description required skills
-         
-   * Intermediate_resume: resume skills are related to the job description skills
-         
-   * High_resume: most resume skills exist or relate very well with the job description required skills
-         
-   * High_plus_resume: most resume skills existor relate very well with the job description required skills and there are extra skills
-         
-   These are our samples:
-           
-   Job description:
-    <p align="center">
-    <img src="./Resources/Project documentation/Job_description_example.png" width="650" title="Job_description_example" alt="Job_description_example">
+   * Jobs:
+   <p align="center">
+    <img src="./Resources/Project documentation/jobs.png" width="650" title="jobs_examples" alt="Jobs_examples">
     </p>
-            
-   Lowest_resume:
-    <p align="center">
-    <img src="./Resources/Project documentation/Lowest_resume_example.png" width="650" title="Lowest_resume_example" alt="Lowest_resume_example">
+    
+   * Resumes:
+   <p align="center">
+    <img src="./Resources/Project documentation/resumes.png" width="650" title="resumes_examples" alt="Resumes_examples">
     </p>
-            
-   Low_resume:
-    <p align="center">
-            <img src="./Resources/Project documentation/Low_resume_example.png" width="650" title="Low_resume_example" alt="Low_resume_example">
+         
+   These are some the scores result:
+   <p align="center">
+    <img src="./Resources/Project documentation/matching_results.png" width="650" title="matching_results" alt="matching_results">
     </p>
-            
-   Intermediate_resume:
-    <p align="center">
-    <img src="./Resources/Project documentation/Intermediate_resume_example.png" width="650" title="Intermediate_resume_example"                    alt="Intermediate_resume_example">
-    </p>
-            
-   High_resume:
-    <p align="center">
-    <img src="./Resources/Project documentation/High_resume_example.png" width="650" title="High_resume_example" alt="High_resume_example">
-    </p>
-            
-   High_plus_resume:
-    <p align="center">
-    <img src="./Resources/Project documentation/High_plus_resume_example.png" width="650" title="High_plus_resume_example" alt="High_plus_resume_example">
+    
+   These are some the scores result:
+   <p align="center">
+    <img src="./Resources/Project documentation/ranking_results.png" width="650" title="ranking_results" alt="ranking_results">
     </p>
             
             
             
    Evaluation:
    
+   We used precision @k metric to evaluate our models' results. Precision at k is the proportion of recommended items in the top-k set that are relevant. In our case k is 15.
+   These are the results for each job and model:
+   <p align="center">
+    <img src="./Resources/Project documentation/precision_results.png" width="650" title="precision_result" alt="precision_results">
+    </p>
+    
+    
+   The total precision for each model on 5 jobs:
+   <p align="center">
+    <img src="./Resources/Project documentation/final_results.png" width="650" title="final_result" alt="final_results">
+    </p>
    
- |                     | Semantic similarity on Word embeddings  | Semantic similarity on Sentence embeddings |
- | ------------------- | --------------------------------------- | ------------------------------------------ |
- | Lowest_resume       | 0.19                                    | 0.08                                       |
- | Low_resume          | 0.37                                    | 0.48                                       |
- | Intermediate_resume | 0.58                                    | 0.45                                       |
- | High_resume         | 0.74                                    | 0.82                                       |
- | High_plus_resume    | 0.77                                    | 0.74                                       |
-    
-    
-
-  ***Semantic similarity on word embeddings approach works better for two reasons:***
-   1.	It tries to find related skills if a required skill doesn’t exist in the resume
-   2.	It values the fact that a resume has plus skills while sentence-based approach makes the resume’s vector representation with plus skills far a way                   from the job description
 
   <p>Visit <a href="https://github.com/amiradridi/Job-Resume-Matching/blob/master/services/Semantic%20similarity.ipynb">this notebook</a> for the full code of the semantic similarity approach.</p>
 
@@ -160,15 +113,14 @@ Our structured job descriptions dataset :
 
  
 * 3rd step: 
-  We Calculated the final similarity score and returned the resumes with the highest similarity score.
+  We Calculated the final similarity score (the mean of skills matching score, degrees matching score and majors matching score) and returned the resumes with the highest similarity score.
   
   
  ## Project summary
  
  1. We retrieved information from the job description using Spacy brule-based PhraseMatcher
  2. We implemented matching rules for the degrees' levels and the acceptable majors
- 3. We compared between two powerful word embedding models gpt3 and sbert 'all-mpnet-base-v2' and we chose sbert for its efficiency
- 4. We compared between word embedding and sentence embedding approaches and we chose word embedding as it produces accurate semantic similarity
+ 3. We compared between 5 powerful word embedding models to generate the skills matching scores and we chose sbert for its high precision
 
  ## References
  
