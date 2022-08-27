@@ -87,7 +87,7 @@ Our structured job descriptions dataset :
             
    Evaluation:
    
-   We used precision @k metric to evaluate our models' results. Precision at k is the proportion of recommended items in the top-k set that are relevant. In our case k is 15.
+   We used precision @k metric to evaluate our models' results comparing to manually annotated dataset. Precision at k is the proportion of recommended items in the top-k set that are relevant. In our case k is 15.
    These are the results for each job and model:
    <p align="center">
     <img src="./Resources/Project documentation/precision_results.png" width="650" title="precision_result" alt="precision_results">
