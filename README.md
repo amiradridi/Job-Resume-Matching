@@ -49,17 +49,10 @@ Our structured job descriptions dataset :
   We tried different pre-trained models to embed our words ('all-mpnet-base-v2', 'paraphrase-MiniLM-L6-v2', 'gpt3','all-MiniLM-L12-v1','all-roberta-large-v1').
   Embeddings are a key part of modern NLP, they encode the meaning of words or other linguistic units into vectors of numbers.
 
-  The steps that we followed later on to calculate the similarity between the job and the resume:
+  The steps that we followed later on to calculate the similarity between the job and the resume with each model:
   
-  1. We derive semantically meaningful word and sentence embeddings using the chosen Siamese BERT-Networks pretrained model ‘all-mpnet-base-v2’ that has these             specificities:
-   <p align="center">
-   <img src="./Resources/Project documentation/pre-trained sbert model.png" width="650" title="pre-trained sbert model" alt="pre-trained sbert model">
-   </p>
-   <p align="center">
-   <img src="./Resources/Project documentation/sbert_models_differences.png" width="650" title="sbert_models_differences" alt="sbert_models_differences">
-   </p>
-   
-   
+  1. We derive semantically meaningful word embeddings using the different models mentioned above
+
   2. We compare those embeddings with cosine similarity to find the nearest resumes to the job description
      Cosine similarity is defined as the inner product of two vectors divided by the product of their length. Cosine similarity is defined as:
      <p align="center">
@@ -68,7 +61,7 @@ Our structured job descriptions dataset :
      where vectors a and b have the same number of dimensions N. Cosine similarity can be used to compare similarity between document vectors.
           
    We tried that approach on skills words of 15 resumes and 5 jobs :
-   The resumes information were extracted by a colleague on the project and jobs were extracted from a public dataset on Kaggle 
+   The resumes information were extracted by a colleague and the jobs were extracted from a public dataset on Kaggle. 
    
    * Jobs:
    <p align="center">
