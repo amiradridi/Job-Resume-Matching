@@ -77,9 +77,12 @@ class JobInfoExtraction:
         jobs['Acceptable majors'] = ""
         jobs['Skills'] = ""
         for i, row in jobs.iterrows():
-            job = jobs['Qualifications'][i].replace('. ', ' ')
+            job = jobs['Job description'][i].replace('. ', ' ')
             degrees = self.match_degrees_by_spacy(self, job)
-            jobs['Minimum degree level'][i] = self.get_minimum_degree(self, degrees)
+            if len(degrees) != 0:
+                jobs['Minimum degree level'][i] = self.get_minimum_degree(self, degrees)
+            else:
+                jobs['Minimum degree level'][i] = ""
             jobs['Acceptable majors'][i] = self.match_majors_by_spacy(self, job)
             jobs['Skills'][i] = self.match_skills_by_spacy(self, job)
         return jobs

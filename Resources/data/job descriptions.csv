@@ -1,4 +1,4 @@
-,Job description,Qualifications,Minimum degree level,Acceptable majors,Required skills
+,Job description
 0,"Job details:
 Develop information systems by architecting, designing, and implementing advanced software solutions.
 Create software by studying business needs, conferring with process owners, and examining systems flow, data usage, and work processes.
@@ -6,9 +6,7 @@ Author documentation, flowcharts, layouts, diagrams, charts, code comments, and 
 Bachelor’s and/or master’s degree in computer science, computer engineering, data sciences, or related technical discipline
 5+ years of professional software development experience
 Experience with computer vision or nlp
-Proficiency in Java or C++","bachelor’s and/or master’s in computer science, computer engineering, or related technical discipline
-5+ years of professional software development experience
-proficiency in java or c++",BS-LEVEL,"['computer science', ' computer engineering']",{'professional software development ': 5}
+Proficiency in Java or C++"
 1,"Job details: Ultimate Music Builders is a small music production company headquartered in Dallas, Texas. We specialize in providing customized digital tools for online music content creators. Our staff consists of many talented music creators who are very experienced with authoring music with digital tech. We are seeking a strong senior software engineer who can create outstanding digital music production tools while building a solid engineering staff to enable further growth.
 
 Responsibilities: 
@@ -42,18 +40,7 @@ Salary: $140,000–220,000 annual
 Additional compensation: bonuses
 Insurance: health, dental, vision, life
 Retirement: 401(k)
-About the company: Ultimate Music Builders is a small, close-knit group of artists and engineers who like to have fun with what we do, but we are also very serious about our craft. We need someone who can not only drive the development of great software products but is also a stellar leader who can build and motivate teams to perform. If you love music, creating products to support online music creation and publication, and want to join a rockin’ organization, then we are the family for you! ","b.a. or b.s. in computer science, information technology, or related discipline (m.s. preferred)
-over 5 years of software engineering or related experience
-over 3 years of software development experience
-experience managing teams and projects
-proven programming experience (java, python, c++, etc.)
-highly skilled in data gathering and analysis
-extensive experience with software development best practices and methodologies
-strong knowledge of software design, documentation, and testing
-project management knowledge (requirements, design, planning)
-knowledge of software architecture (preferred)
-experience coaching and mentoring junior team members (preferred)
-music industry experience (preferred)",BS-LEVEL,"['computer science', ' information technology']","{'software engineering': 5, 'software development ': 3, 'software development best practices and methodologies': 2, 'software design': 1, 'documentation': 1, 'testing': 1}"
+About the company: Ultimate Music Builders is a small, close-knit group of artists and engineers who like to have fun with what we do, but we are also very serious about our craft. We need someone who can not only drive the development of great software products but is also a stellar leader who can build and motivate teams to perform. If you love music, creating products to support online music creation and publication, and want to join a rockin’ organization, then we are the family for you! "
 2,"Job details: BasemodelTechs Unlimited is an industry-leading Python development company based in Boston, MA. Our exceptional in-house Python developers are relentless about taking projects to the next level with custom solutions to meet any business needs. We are seeking a like-minded developer who can efficiently analyze business requirements and create exceptional Python code to exceed business expectations and keep or get client projects back on track.
 
 Responsibilities: 
@@ -83,15 +70,7 @@ Comprehensive insurance coverage
 Paid vacation, including 20 days per year (from day one, increasing with tenure)
 Daycare and fitness plans available
 401(k), including company matching
-About the company: At BasemodelTechs Unlimited, we have worked on many Python applications for our clients across different environments and industries. Hiring BasemodelTechs means you get a single point of contact backed by a local, US-based team of seasoned Python developers. We pride ourselves on our results-driven and transparent approach. We need a highly skilled professional who can meet our standards of excellence. If you are up for the challenges (and the rewards), then check us out.","bachelor’s in computer science or equivalent experience
-3 to 5 years of experience in b2b
-hands-on experience working with technologies like hadoop, hive, pig, spark, sqoop, kafka, flume, etc.
-strong devops focus and experience building and deploying infrastructure with cloud deployment technologies like ansible, chef, puppet, etc.
-experience with test-driven development and automated testing frameworks
-experience with scrum/agile development methodologies
-capable of delivering on multiple competing priorities with little supervision
-experience with infrastructure automation technologies like docker, vagrant, etc.
-experience with build automation (maven, jenkins, etc.), monitoring (nagios, ganglia, etc.), apis, and services using rest, soap, etc.",BS-LEVEL,['computer science'],"{'B2B': 2, 'working with technologies like Hadoop': 2, 'Hive': 2, 'Pig': 2, 'Spark': 2, 'Sqoop': 2, 'Kafka': 2, 'Flume': 2, 'building and deploying infrastructure with cloud deployment technologies like Ansible': 2, 'Chef': 2, 'Puppet': 2}"
+About the company: At BasemodelTechs Unlimited, we have worked on many Python applications for our clients across different environments and industries. Hiring BasemodelTechs means you get a single point of contact backed by a local, US-based team of seasoned Python developers. We pride ourselves on our results-driven and transparent approach. We need a highly skilled professional who can meet our standards of excellence. If you are up for the challenges (and the rewards), then check us out."
 3,"Job details: ToadDispatch is an innovation consultancy that creates new digital products, services, and businesses to deliver highly profitable growth for the world's most ambitious software designers. Located in Sunnyvale, California, we are looking for talented software engineers to join our staff of exceptional professionals. You will work with some of the best companies in the field on exciting development projects.
 
 Responsibilities: 
@@ -124,14 +103,7 @@ Full coverage health insurance (vision, dental, life)
 Onsite gym with wellness and diet assistance programs available
 Special programs with season passes for local sporting and cultural events
 401(k) and profit-sharing plan
-About the company: We're a diverse group of disciplined software engineers who focus on thoughtful designs for the best user experience. Our highly outcome-driven software strategists and experienced business innovators thrive on creating great solutions. The team is looking for new people with big ideas and the creative talent to deliver world-class products. Come work with our outstanding team and help us build a great future. ","bachelor’s and/or master’s in computer science, computer engineering, or related technical discipline
-5+ years of professional software development experience
-proficiency in java or c++
-object-oriented design skills
-knowledge of application architecture and design
-knowledge of software engineering and best practices, including coding standards, code reviews, source code control, build processes, testing, and operations
-experience serving as technical lead throughout the full software development lifecycle, (conception, scope, architecture, design, planning, implementation, testing, documentation, delivery, maintenance)—preferred
-experience in the development of distributed systems, scalability, and high-volume transaction processing—preferred",BS-LEVEL,"['computer science', ' computer engineering']",{'professional software development ': 5}
+About the company: We're a diverse group of disciplined software engineers who focus on thoughtful designs for the best user experience. Our highly outcome-driven software strategists and experienced business innovators thrive on creating great solutions. The team is looking for new people with big ideas and the creative talent to deliver world-class products. Come work with our outstanding team and help us build a great future. "
 4,"[Intro Paragraph] Beginning your software engineer job description with an introductory paragraph about your company and the working environment is the best way to set your company apart from other employers. Take two or three sentences to let developers know what you bring to the table for new hires so you know you’re attracting the best of the best.
 
 Software Engineer Roles and Responsibilities:
@@ -173,10 +145,4 @@ Experience serving as technical lead throughout the full software development li
 Knowledge of professional software engineering and best practices for the full software development life cycle, including coding standards, code reviews, source control management, build processes, testing, and operations
 Experience in development of distributed/scalable systems and high-volume transaction applications
 [Call to Action] You’ve got a candidate’s interest. Now how do you get their application? Include a compelling call to action right here that encourages job hunters to apply and tells them how. Advise prospective developers to click the “apply” button at the top of the job listing or to contact your HR department directly.
-","bachelor’s and/or master’s in computer science, computer engineering or related technical discipline
-5+ years of professional software development experience
-proficiency in java or c++, and object-oriented design skills
-application architecture and design patterns
-experience serving as technical lead throughout the full software development lifecycle, from conception, architecture definition, detailed design, scoping, planning, implementation, testing to documentation, delivery and maintenance is preferred
-knowledge of professional software engineering and best practices for the full software development life cycle, including coding standards, code reviews, source control management, build processes, testing, and operations
-experience in development of distributed/scalable systems and high-volume transaction applications",MS-LEVEL,"['computer science', ' computer engineering']",{'professional software development ': 5}
+"
