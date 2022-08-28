@@ -73,12 +73,12 @@ Our structured job descriptions dataset :
     <img src="./Resources/Project documentation/resumes.png" width="650" title="resumes_examples" alt="Resumes_examples">
     </p>
          
-   These are some the scores result:
+   These are some of the scores' results:
    <p align="center">
     <img src="./Resources/Project documentation/matching_results.png" width="650" title="matching_results" alt="matching_results">
     </p>
     
-   These are some the scores result:
+   These are the ranks of resumes for each job:
    <p align="center">
     <img src="./Resources/Project documentation/ranking_results.png" width="650" title="ranking_results" alt="ranking_results">
     </p>
