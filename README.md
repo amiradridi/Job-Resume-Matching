@@ -46,7 +46,7 @@ Our structured job descriptions dataset :
   In this part, we will use semantic similarity-based approach to match resumes' skills and jobs' skills.
   Semantic similarity approach is the task of searching for documents or sentences (resumes) which contain semantically similar content to a search document           (the job description).
   
-  We tried different pre-trained models to embed our words ('all-mpnet-base-v2', 'paraphrase-MiniLM-L6-v2', 'gpt3','all-MiniLM-L12-v1','all-roberta-large-v1').
+  We tried different pre-trained models to embed our words ('all-mpnet-base-v2', 'paraphrase-MiniLM-L6-v2', 'gpt3','all-MiniLM-L12-v1','all-roberta-large-v1','bert-base-nli-mean-tokens').
   Embeddings are a key part of modern NLP, they encode the meaning of words or other linguistic units into vectors of numbers.
 
   The steps that we followed later on to calculate the similarity between the job and the resume with each model:
@@ -101,6 +101,7 @@ Our structured job descriptions dataset :
    
 
   <p>Visit <a href="https://github.com/amiradridi/Job-Resume-Matching/blob/master/services/Models%20evaluation.ipynb">this notebook</a> for the full code of the semantic similarity approach.</p>
+  We have chosen 'bert-base-nli-mean-tokens' as skills matching model for its high precision.
 
   
 
@@ -113,7 +114,7 @@ Our structured job descriptions dataset :
  
  1. We retrieved information from the job description using Spacy brule-based PhraseMatcher
  2. We implemented matching rules for the degrees' levels and the acceptable majors
- 3. We compared between 5 powerful word embedding models to generate the skills matching scores and we chose sbert for its high precision
+ 3. We compared between 6 powerful word embedding models to generate the skills matching scores and we chose 'bert-base-nli-mean-tokens' for its high precision
 
  ## References
  
