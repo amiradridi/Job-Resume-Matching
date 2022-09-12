@@ -112,7 +112,7 @@ Our structured job descriptions dataset :
   
  ## Project summary
  
- 1. We retrieved information from the job description using Spacy brule-based PhraseMatcher
+ 1. We retrieved information from the job description using Spacy rule-based PhraseMatcher
  2. We implemented matching rules for the degrees' levels and the acceptable majors
  3. We compared between 6 powerful word embedding models to generate the skills matching scores and we chose 'bert-base-nli-mean-tokens' for its high precision
 
