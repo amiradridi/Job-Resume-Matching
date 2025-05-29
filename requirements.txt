@@ -1,10 +1,13 @@
 fastapi==0.79.0
-spacy==3.4.1
+spacy==3.8.7
 pandas==1.4.3
 uvicorn==0.18.2
-pydantic==1.9.1
+pydantic>=1.10.0,<1.11
 pymongo~=4.2.0
 motor~=3.0.0
-sklearn~=0.0
 scikit-learn~=1.1.2
+numpy~=1.22.0
+torch==2.7.0 --index-url https://download.pytorch.org/whl/cpu
+torchvision==0.22.0 --index-url https://download.pytorch.org/whl/cpu
+torchaudio==2.7.0 --index-url https://download.pytorch.org/whl/cpu
 sentence-transformers==2.2.2
